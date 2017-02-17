@@ -11,13 +11,25 @@ For an index of the package's contents, [click here](http://).
 
 sfPalettes was inspired by Kartik Ram's [wesanderson](https://github.com/karthik/wesanderson) package.
 
-### Installation
+## Installation
 
 ```r
 devtools::install_github("arcaravaggi/sfPalettes")
 ```
 
-### Usage
+## Development
+
+### Contributions
+
+I welcome contributions to the package. Contributors are welcome to fork the package and suggest additions or improvements.  
+
+### I found a bug
+
+Please report it to the [issue tracker][issues]. Please provide specific details, allowing the error to be reproduced and investigated. Always note the version of R you are using, along with any other relevant software (e.g. RStudio).  
+
+[issues]: https://github.com/arcaravaggi/sfPalettes/issues
+
+## Usage
 
 ```r
 library("sfPalettes")
@@ -80,19 +92,7 @@ ggplot(heatmap, aes(x = X2, y = X1, fill = value)) +
 
 <img src="figure/ROTS-1.png" style="display: block; margin: auto;" />
 
-# Development
-
-## Contributions
-
-Contributors are welcome to fork the package and suggest additions or improvements.  
-
-#### I found a bug
-
-Please report it to the [issue tracker][issues]. Please provide specific details, allowing the error to be reproduced and investigated. Always note the version of R you are using, along with any other relevant software (e.g. RStudio).  
-
-[issues]: https://github.com/arcaravaggi/sfPalettes/issues
-
-# License
+## License
 
 This package is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License, version 3, as published by the Free Software Foundation.
 
