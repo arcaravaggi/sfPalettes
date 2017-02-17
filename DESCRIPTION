@@ -1,0 +1,19 @@
+Package: sfPalettes
+Type: Package
+Title: sfPalettes - A package of color palettes based on popular sci-fi movies
+Version: 0.1.0
+Authors@R:  person("Anthony", "Caravaggi", role = c("aut", "cre"), email = "ar.caravaggi@gmail.com")
+Maintainer: The package maintainer <ar.caravaggi@gmail.com>
+Description: Palettes based on sci-fi movies
+Date: 2017-02-17
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Suggests:
+    ggplot2,
+    knitr,
+    rmarkdown
+URL: https://github.com/arcaravaggi/sfPalettes
+BugReports: https://github.com/arcaravaggi/sfPalettes/issues
+RoxygenNote: 5.0.1
+VignetteBuilder: knitr
