@@ -6,7 +6,7 @@ Anthony Caravaggi
 
 sfPalettes is a library of colour palettes based on popular (and, perhaps, not so popular) science fiction movies. All colour palettes in this package were created using a number of publically available sources, including screenshots and posters. 
 
-For an index of the package's contents, [click here](http://).
+For an index of the palettes contained within the package, [click here](http://htmlpreview.github.io/?https://github.com/arcaravaggi/sfPalettes/blob/master/vignettes/sfPalettes.html).
 
 sfPalettes was inspired by Kartik Ram's [wesanderson](https://github.com/karthik/wesanderson) package.
 
