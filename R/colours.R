@@ -26,7 +26,7 @@ SF_palettes <- list(
 #' Colour palettes from sci-fi movies.
 #'
 #' @param n Number of colours required.
-#' @param name Name of desired palette. See `index`(\url{http://}) for a full list of package colours.
+#' @param name Name of desired palette. See `index`(\url{http://htmlpreview.github.io/?https://github.com/arcaravaggi/sfPalettes/blob/master/vignettes/sfPalettes.html}) for a full list of package colours.
 #' @param type "Continuous" for interpolated palettes, or "discrete".
 #' @return A vector of colours.
 #' @export
