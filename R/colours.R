@@ -12,12 +12,18 @@ SF_palettes <- list(
   TPM = c("#27211A", "#5A689B", "#744753", "#0b9e44", "#D8B38D", "#B68C5F"),
   AOTC = c("#647691", "#A9BB99", "#2A2024", "#93530B", "#FF8E1E", "#3E543F"),
   ROTS = c("#D6C078", "#525252", "#A10000", "#787878", "#D90008", "#0E0C0F"),
-  TFA = c("#CCB361", "#A10000", "#51B6ED", "#0b9e44", "#985C18", "#D90008")
+  TFA = c("#CCB361", "#A10000", "#51B6ED", "#0b9e44", "#985C18", "#D90008"),
+#Jurassic Park
+  JP = c("#000000", "#FE0000", "#FCFC0B", "#224D31", "#385565", "#2D0E1E", "#857B2F"),
+#Her
+  HER = c("#9F9D64", "#B93822", "#DAA96F", "#AE9479", "#93C0C9", "#EFE2D9"),
+#The Martian
+  TM = c("#DEAE66", "#7A2A1C", "#1D0E0A", "#A37E47", "#E8AF92", "#EACA97", "#3F1F14"),
+#Eternal Sunshine of the Spotless Mind
+  ESSM = c("#CAD4E0", "#B4887F", "#B7ADA1", "#0F5DA5", "#51A2BF", "#271314", "#6A2423")
 )
 
-#' A Space Movie palette generator ....
-#'
-#' These are a handful of color palettes from the Space Movie franchise.
+#' Colour palettes from sci-fi movies.
 #'
 #' @param n Number of colours required.
 #' @param name Name of desired palette. See `index`(\url{http://}) for a full list of package colours.
@@ -68,11 +74,6 @@ print.palette <- function(x, ...) {
   rect(0, 0.9, n + 1, 1.1, col = rgb(1, 1, 1, 0.8), border = NA)
   text(((n + 1) / 2), 1, labels = attr(x, "name"), cex = 1.5, family = "sans")
 }
-
-#' heatmap
-#'
-#' A heatmap example
-# "heatmap"
 
 #' @seealso
 #' Karthik Ram's `wesanderson`(\url{https://github.com/karthik/wesanderson}) color palettes.
