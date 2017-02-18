@@ -1,8 +1,5 @@
 # sfPalettes - Sci-fi movie colour palettes
-Anthony Caravaggi  
 
-
-# sfPalettes
 
 sfPalettes is a library of colour palettes based on popular (and, perhaps, not so popular) science fiction movies. All colour palettes in this package were created using a number of publically available sources, including screenshots and posters. 
 
@@ -34,10 +31,28 @@ Please report it to the [issue tracker][issues]. Please provide specific details
 library("sfPalettes")
 ```
 
+```
+## 
+## Attaching package: 'sfPalettes'
+```
+
+```
+## The following object is masked _by_ '.GlobalEnv':
+## 
+##     SF_palette
+```
+
 #### Scatterplot with the Jurassic Park palette
 
 ```r
 library("ggplot2")
+```
+
+```
+## Warning: package 'ggplot2' was built under R version 3.3.2
+```
+
+```r
 ggplot(iris, aes(Sepal.Length, Sepal.Width, color = Species)) +
   theme_bw() +
   geom_point(size = 3) +

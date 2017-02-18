@@ -1,6 +1,5 @@
 ---
 title: "sfPalettes - Sci-fi movie colour palettes"
-author: "Anthony Caravaggi"
 output:  
       html_document:  
         keep_md: TRUE 
@@ -12,8 +11,6 @@ fig.align = "center",
 fig.path = "figure/"
 )
 ```
-
-# sfPalettes
 
 sfPalettes is a library of colour palettes based on popular (and, perhaps, not so popular) science fiction movies. All colour palettes in this package were created using a number of publically available sources, including screenshots and posters. 
 

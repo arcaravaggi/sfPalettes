@@ -9,7 +9,6 @@
 <meta name="generator" content="pandoc" />
 
 
-<meta name="author" content="Anthony Caravaggi" />
 
 
 <title>sfPalettes - Sci-fi movie colour palettes</title>
@@ -117,13 +116,10 @@ $(document).ready(function () {
 
 
 <h1 class="title toc-ignore">sfPalettes - Sci-fi movie colour palettes</h1>
-<h4 class="author"><em>Anthony Caravaggi</em></h4>
 
 </div>
 
 
-<div id="sfpalettes" class="section level1">
-<h1>sfPalettes</h1>
 <p>sfPalettes is a library of colour palettes based on popular (and, perhaps, not so popular) science fiction movies. All colour palettes in this package were created using a number of publically available sources, including screenshots and posters.</p>
 <p>For an index of the palettes contained within the package, <a href="http://htmlpreview.github.io/?https://github.com/arcaravaggi/sfPalettes/blob/master/vignettes/sfPalettes.html">click here</a>.</p>
 <p>sfPalettes was inspired by Kartik Ram’s <a href="https://github.com/karthik/wesanderson">wesanderson</a> package.</p>
@@ -145,10 +141,16 @@ $(document).ready(function () {
 <div id="usage" class="section level2">
 <h2>Usage</h2>
 <pre class="r"><code>library(&quot;sfPalettes&quot;)</code></pre>
+<pre><code>## 
+## Attaching package: 'sfPalettes'</code></pre>
+<pre><code>## The following object is masked _by_ '.GlobalEnv':
+## 
+##     SF_palette</code></pre>
 <div id="scatterplot-with-the-jurassic-park-palette" class="section level4">
 <h4>Scatterplot with the Jurassic Park palette</h4>
-<pre class="r"><code>library(&quot;ggplot2&quot;)
-ggplot(iris, aes(Sepal.Length, Sepal.Width, color = Species)) +
+<pre class="r"><code>library(&quot;ggplot2&quot;)</code></pre>
+<pre><code>## Warning: package 'ggplot2' was built under R version 3.3.2</code></pre>
+<pre class="r"><code>ggplot(iris, aes(Sepal.Length, Sepal.Width, color = Species)) +
   theme_bw() +
   geom_point(size = 3) +
   scale_color_manual(values = SF_palette(&quot;JP&quot;)) +
@@ -193,7 +195,6 @@ ggplot(heatmap, aes(x = X2, y = X1, fill = value)) +
 <p>This package is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License, version 3, as published by the Free Software Foundation.</p>
 <p>This program is distributed in the hope that it will be useful, but without any warranty; without even the implied warranty of merchantability or fitness for a particular purpose. See the GNU General Public License for more details.</p>
 <p>A copy of the GNU General Public License, version 3, is available at <a href="https://www.r-project.org/Licenses/GPL-" class="uri">https://www.r-project.org/Licenses/GPL-</a></p>
-</div>
 </div>
 
 
