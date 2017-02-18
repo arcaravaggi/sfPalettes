@@ -1,0 +1,31 @@
+---
+title: "sfPalette Colour Index"
+author: "Anthony Caravaggi"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{sfPalette Colour Index}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+  \usepackage[utf8]{inputenc}
+---
+
+Color code | Movie title 
+-----------|-------------
+ESSM| Eternal Sunshine of the Spotless Mind 
+HER | Her
+JP | Jurassic Park
+TM | The Martian
+
+**Star Wars saga**  
+
+Color code | Movie title 
+-----------|-------------
+TPM | The Phantom Menace
+AOTC | Attack of the Clones
+ROTS | Revenge of the Sith
+ANH | A New Hope
+RGO | Rogue One
+ROTJ | Return of the Jedi
+TESB | The Empire Strikes Back
+TFA | The Force Awakens
