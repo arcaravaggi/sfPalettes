@@ -1,6 +1,5 @@
 # sfPalettes - Sci-fi movie colour palettes
 Anthony Caravaggi  
-`r Sys.Date()`  
 
 
 # sfPalettes
@@ -35,19 +34,19 @@ Please report it to the [issue tracker][issues]. Please provide specific details
 library("sfPalettes")
 ```
 
-#### Scatterplot with the "ANH" (Star Wars - A New Hope) palette
+#### Scatterplot with the Jurassic Park palette
 
 ```r
 library("ggplot2")
 ggplot(iris, aes(Sepal.Length, Sepal.Width, color = Species)) +
   theme_bw() +
   geom_point(size = 3) +
-  scale_color_manual(values = SF_palette("ANH")) +
+  scale_color_manual(values = SF_palette("JP")) +
   labs(y = "Sepal width", x = "Sepal length") +
   theme(legend.text = element_text(face = "italic"))
 ```
 
-<img src="figure/ANH-1.png" style="display: block; margin: auto;" />
+<img src="figure/JP-1.png" style="display: block; margin: auto;" />
 
 #### Star Wars - The Empire Strikes Back
 
@@ -57,30 +56,30 @@ SF_palette("TESB")
 
 <img src="figure/TESB-1.png" style="display: block; margin: auto;" />
 
-#### Stacked barplot using "RGO" (Rogue One)
+#### Stacked barplot using The Martian
 
 ```r
 qplot(factor(cyl), data = mtcars, geom = "bar", fill=factor(vs)) +
-  scale_fill_manual(values = SF_palette("RGO"))
+  scale_fill_manual(values = SF_palette("TM"))
 ```
 
-<img src="figure/RGO-1.png" style="display: block; margin: auto;" />
+<img src="figure/TM-1.png" style="display: block; margin: auto;" />
 
-#### A mountain created by the Force awakening
+#### A mountain created with Her
 
 ```r
-SF_colours_1 <- SF_palette("TFA", 21, type = "continuous")
+SF_colours_1 <- SF_palette("HER", 21, type = "continuous")
 image(volcano, col = SF_colours_1, las = 1)
 ```
 
-<img src="figure/TFA-1.png" style="display: block; margin: auto;" />
+<img src="figure/HER-1.png" style="display: block; margin: auto;" />
 
-#### Heat map using "ROTS" (Revenge of the Sith)
+#### Heat map using Eternal Sunshine of the Spotless Mind
 
 ```r
 data(heatmap)  
 
-SF_colours_2 <- SF_palette("ROTS", 100, type = "continuous")
+SF_colours_2 <- SF_palette("ESSM", 100, type = "continuous")
 
 ggplot(heatmap, aes(x = X2, y = X1, fill = value)) + 
   geom_tile() + 
@@ -90,7 +89,7 @@ ggplot(heatmap, aes(x = X2, y = X1, fill = value)) +
   coord_equal() 
 ```
 
-<img src="figure/ROTS-1.png" style="display: block; margin: auto;" />
+<img src="figure/ESSM-1.png" style="display: block; margin: auto;" />
 
 ## License
 
