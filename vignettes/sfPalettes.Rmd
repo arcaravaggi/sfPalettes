@@ -1,5 +1,5 @@
 ---
-title: "sfPalette Colour Index"
+title: "sfPalette Usage"
 author: "Anthony Caravaggi"
 date: "`r Sys.Date()`"
 output: rmarkdown::html_vignette
@@ -10,22 +10,69 @@ vignette: >
   \usepackage[utf8]{inputenc}
 ---
 
-Color code | Movie title 
------------|-------------
-ESSM| Eternal Sunshine of the Spotless Mind 
-HER | Her
-JP | Jurassic Park
-TM | The Martian
+To display a colour swatch, simply call the `SF_palette` function and pass a palette name. Palette names can be found in the internal _mov_ dataframe. All colours are displayed by default.
 
-**Star Wars saga**  
+```{r start}
+library(sfPalettes)
+data(mov)
+mov
+```
 
-Color code | Movie title 
------------|-------------
-TPM | The Phantom Menace
-AOTC | Attack of the Clones
-ROTS | Revenge of the Sith
-ANH | A New Hope
-RGO | Rogue One
-ROTJ | Return of the Jedi
-TESB | The Empire Strikes Back
-TFA | The Force Awakens
+#### The Empire Strikes Back
+```{r TESB, fig.height = 1}
+SF_palette("TESB")
+```
+
+You can also specify the number of colours displayed by using the `n =` parameter.
+
+#### Her
+```{r Her, fig.height = 1}
+SF_palette("HER", n = 4)
+```
+
+Palettes can be interopolated by extending `n =` beyond the number of available colours and using `type = continuous`.
+
+#### Eternal Sunshine of the Spotless Mind
+```{r ESSM, fig.height = 1}
+SF_palette("ESSM", n = 24, type = "continuous")
+```
+
+
+You can also use SF_palettes to colour your plots, as below:
+
+#### Scatterplot with the Jurassic Park palette
+```{r JP}
+library("ggplot2")
+ggplot(iris, aes(Sepal.Length, Sepal.Width, color = Species)) +
+  theme_bw() +
+  geom_point(size = 3) +
+  scale_color_manual(values = SF_palette("JP")) +
+  labs(y = "Sepal width", x = "Sepal length") +
+  theme(legend.text = element_text(face = "italic"))
+```
+
+#### Stacked barplot using The Martian
+```{r TM}
+qplot(factor(cyl), data = mtcars, geom = "bar", fill=factor(vs)) +
+  scale_fill_manual(values = SF_palette("TM"))
+```
+
+#### A mountain created with Her
+```{r HER2}
+SF_colours_1 <- SF_palette("HER", 21, type = "continuous")
+image(volcano, col = SF_colours_1, las = 1)
+```
+
+#### Heat map using Eternal Sunshine of the Spotless Mind
+```{r ESSM2}
+data(heatmap)  
+
+SF_colours_2 <- SF_palette("ESSM", 100, type = "continuous")
+
+ggplot(heatmap, aes(x = X2, y = X1, fill = value)) + 
+  geom_tile() + 
+  scale_fill_gradientn(colours = SF_colours_2) + 
+  scale_x_discrete(expand = c(0, 0)) +
+  scale_y_discrete(expand = c(0, 0)) + 
+  coord_equal() 
+```
