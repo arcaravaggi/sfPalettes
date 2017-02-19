@@ -1,3 +1,5 @@
+<!-- Please edit README.Rmd and use to generate README.md -->
+
 ---
 title: "sfPalettes - Sci-fi movie colour palettes"
 output:  
@@ -8,44 +10,126 @@ output:
 knitr::opts_chunk$set(
 echo = TRUE, 
 fig.align = "center",
-fig.path = "figure/"
+fig.path = "figure/",
+fig.height = 1
 )
 ```
 
+Not too long ago, on a laptop not that far away...
+
 sfPalettes is a library of colour palettes based on popular (and, perhaps, not so popular) science fiction movies. All colour palettes in this package were created using a number of publically available sources, including screenshots and posters. 
 
-For an index of the palettes contained within the package, call the internal `mov` dataframe. For usage instructions, [click here](http://htmlpreview.github.io/?https://github.com/arcaravaggi/sfPalettes/blob/master/vignettes/sfPalettes.html).
+sfPalettes was inspired by Kartik Ram's [wesanderson](https://github.com/karthik/wesanderson) package and Chris Hamm's [spaceMovie](https://github.com/butterflyology/spaceMovie) Star Wars-themed package.. 
 
-sfPalettes was inspired by Kartik Ram's [wesanderson](https://github.com/karthik/wesanderson) package.
-
-## Installation
+### Installation
 ```{r install, eval = FALSE}
 devtools::install_github("arcaravaggi/sfPalettes")
 ```
 
-### Examples  
+### Usage
+```{r, palettes_dummy}
+library(sfPalettes)
+# See all palettes
+names(SF_palettes)
+```
 
-#### Scatterplot with the Jurassic Park palette
-```{r JP}
+### Package palettes and example plots
+
+#### A New Hope
+```{r Hope1, fig.height = 3}
 library("ggplot2")
 ggplot(iris, aes(Sepal.Length, Sepal.Width, color = Species)) +
   theme_bw() +
   geom_point(size = 3) +
-  scale_color_manual(values = SF_palette("JP")) +
+  scale_color_manual(values = SF_palette("Hope")) +
   labs(y = "Sepal width", x = "Sepal length") +
   theme(legend.text = element_text(face = "italic"))
 ```
 
-#### Star Wars - The Empire Strikes Back
-```{r TESB, fig.height = 1}
-SF_palette("TESB")
+```{r Hope2}
+SF_palette("Hope")
+```
+
+#### Attack of the Clones
+```{r Clones}
+SF_palette("Clones")
+```
+
+#### Eternal Sunshine of the Spotless Mind
+```{r Sunshine}
+SF_palette("Sunshine")
+```
+
+#### Her
+```{r, volcano, fig.height = 3}
+pal <- SF_palette("Her", 21, type = "continuous")
+image(volcano, col = pal)
+```
+
+```{r Her}
+SF_palette("Her")
+```
+
+#### Jurassic Park
+```{r, jurassic_heatmap, fig.height = 3}
+pal <- SF_palette("Jurassic", 100, type = "continuous")
+# heatmap is a local dataset
+ggplot(heatmap, aes(x = X2, y = X1, fill = value)) +
+  geom_tile() + 
+  scale_fill_gradientn(colours = pal) + 
+  scale_x_discrete(expand = c(0, 0)) +
+  scale_y_discrete(expand = c(0, 0)) + 
+  coord_equal() 
+```
+
+```{r Jurassic}
+SF_palette("Jurassic")
+```
+
+#### Rogue One
+```{r Rogue}
+SF_palette("Rogue")
+```
+
+#### Return of the Jedi
+```{r Jedi}
+SF_palette("Jedi")
+```
+
+#### Revenge of the Sith
+```{r Sith}
+SF_palette("Sith")
+```
+
+```{r, ggplot1, fig.height = 3}
+qplot(factor(cyl), data=mtcars, geom="bar", fill=factor(vs)) + 
+  scale_fill_manual(values = SF_palette("Sith"))
+```
+
+#### The Empire Strikes Back
+```{r Empire}
+SF_palette("Empire")
+```
+
+#### The Force Awakens
+```{r Force}
+SF_palette("Force")
+```
+
+```{r Martian}
+SF_palette("Martian")
+```
+
+#### The Phantom Menace
+```{r Menace}
+SF_palette("Menace")
 ```
 
 ## Development
 
 ### Contributions
 
-I welcome contributions to the package. Contributors are welcome to fork the package and suggest additions or improvements.  
+Contributors are welcome to fork the package and suggest additions or improvements.  
 
 ### I found a bug
 

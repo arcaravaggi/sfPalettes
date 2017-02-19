@@ -4,7 +4,7 @@
 \name{SF_palettes}
 \alias{SF_palettes}
 \title{Complete list of palettes}
-\format{An object of class \code{list} of length 8.}
+\format{An object of class \code{list} of length 12.}
 \usage{
 SF_palettes
 }

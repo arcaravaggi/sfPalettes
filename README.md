@@ -5,7 +5,7 @@ sfPalettes is a library of colour palettes based on popular (and, perhaps, not s
 
 For an index of the palettes contained within the package, call the internal `mov` dataframe. For usage instructions, [click here](http://htmlpreview.github.io/?https://github.com/arcaravaggi/sfPalettes/blob/master/vignettes/sfPalettes.html).
 
-sfPalettes was inspired by Kartik Ram's [wesanderson](https://github.com/karthik/wesanderson) package.
+sfPalettes was inspired by Kartik Ram's [wesanderson](https://github.com/karthik/wesanderson) package and Chris Hamm's [spaceMovie](https://github.com/butterflyology/spaceMovie) Star Wars-themed package. `sfPalettes` began as contributions to `spaceMovie` and the package still contains my original Star Wars movie palettes. 
 
 ## Installation
 
@@ -13,7 +13,7 @@ sfPalettes was inspired by Kartik Ram's [wesanderson](https://github.com/karthik
 devtools::install_github("arcaravaggi/sfPalettes")
 ```
 
-### Examples  
+### Example
 
 #### Scatterplot with the Jurassic Park palette
 
@@ -25,11 +25,6 @@ library("ggplot2")
 ## Warning: package 'ggplot2' was built under R version 3.3.2
 ```
 
-```
-## Want to understand how all the pieces fit together? Buy the
-## ggplot2 book: http://ggplot2.org/book/
-```
-
 ```r
 ggplot(iris, aes(Sepal.Length, Sepal.Width, color = Species)) +
   theme_bw() +
@@ -39,9 +34,68 @@ ggplot(iris, aes(Sepal.Length, Sepal.Width, color = Species)) +
   theme(legend.text = element_text(face = "italic"))
 ```
 
+<img src="figure/JP1-1.png" style="display: block; margin: auto;" />
+
+### Package palettes
+
+Palettes will be added as-and-when I have time to develop them. If you'd like to contribute a palette, see __Development__, below.
+
+
+```r
+SF_palette("ANH")
+```
+
+<img src="figure/ANH-1.png" style="display: block; margin: auto;" />
+
+
+```r
+SF_palette("AOTC")
+```
+
+<img src="figure/Attack of the Clones-1.png" style="display: block; margin: auto;" />
+
+
+```r
+SF_palette("ESSM")
+```
+
+<img src="figure/ESSM-1.png" style="display: block; margin: auto;" />
+
+
+```r
+SF_palette("HER")
+```
+
+<img src="figure/HER-1.png" style="display: block; margin: auto;" />
+
+
+```r
+SF_palette("JP")
+```
+
 <img src="figure/JP-1.png" style="display: block; margin: auto;" />
 
-#### Star Wars - The Empire Strikes Back
+
+```r
+SF_palette("RGO")
+```
+
+<img src="figure/RGO-1.png" style="display: block; margin: auto;" />
+
+
+```r
+SF_palette("ROTJ")
+```
+
+<img src="figure/ROTJ-1.png" style="display: block; margin: auto;" />
+
+
+```r
+SF_palette("ROTS")
+```
+
+<img src="figure/ROTS-1.png" style="display: block; margin: auto;" />
+
 
 ```r
 SF_palette("TESB")
@@ -49,11 +103,32 @@ SF_palette("TESB")
 
 <img src="figure/TESB-1.png" style="display: block; margin: auto;" />
 
+
+```r
+SF_palette("TFA")
+```
+
+<img src="figure/TFA-1.png" style="display: block; margin: auto;" />
+
+
+```r
+SF_palette("TM")
+```
+
+<img src="figure/TM-1.png" style="display: block; margin: auto;" />
+
+
+```r
+SF_palette("TPM")
+```
+
+<img src="figure/TPM-1.png" style="display: block; margin: auto;" />
+
 ## Development
 
 ### Contributions
 
-I welcome contributions to the package. Contributors are welcome to fork the package and suggest additions or improvements.  
+Contributors are welcome to fork the package and suggest additions or improvements.  
 
 ### I found a bug
 
