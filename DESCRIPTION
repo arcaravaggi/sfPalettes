@@ -1,7 +1,7 @@
 Package: sfPalettes
 Type: Package
 Title: sfPalettes - A package of color palettes based on popular sci-fi movies
-Version: 0.1.0
+Version: 0.0.0.9
 Authors@R:  person("Anthony", "Caravaggi", role = c("aut", "cre"), email = "ar.caravaggi@gmail.com")
 Maintainer: The package maintainer <ar.caravaggi@gmail.com>
 Description: Palettes based on sci-fi movies
