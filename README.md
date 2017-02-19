@@ -3,9 +3,7 @@
 
 sfPalettes is a library of colour palettes based on popular (and, perhaps, not so popular) science fiction movies. All colour palettes in this package were created using a number of publically available sources, including screenshots and posters. 
 
-For an index of the palettes contained within the package, call the internal `mov` dataframe.
-
-For uage instructions, [click here](http://htmlpreview.github.io/?https://github.com/arcaravaggi/sfPalettes/blob/master/vignettes/sfPalettes.html).
+For an index of the palettes contained within the package, call the internal `mov` dataframe. For usage instructions, [click here](http://htmlpreview.github.io/?https://github.com/arcaravaggi/sfPalettes/blob/master/vignettes/sfPalettes.html).
 
 sfPalettes was inspired by Kartik Ram's [wesanderson](https://github.com/karthik/wesanderson) package.
 
@@ -21,6 +19,18 @@ devtools::install_github("arcaravaggi/sfPalettes")
 
 ```r
 library("ggplot2")
+```
+
+```
+## Warning: package 'ggplot2' was built under R version 3.3.2
+```
+
+```
+## Want to understand how all the pieces fit together? Buy the
+## ggplot2 book: http://ggplot2.org/book/
+```
+
+```r
 ggplot(iris, aes(Sepal.Length, Sepal.Width, color = Species)) +
   theme_bw() +
   geom_point(size = 3) +
