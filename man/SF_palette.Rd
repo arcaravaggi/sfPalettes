@@ -7,11 +7,13 @@
 SF_palette(name, n, type = c("discrete", "continuous"))
 }
 \arguments{
-\item{name}{Name of desired palette.}
+\item{name}{Name of desired palette}
 
-\item{n}{Number of colours required.}
+\item{n}{Number of colours required}
 
-\item{type}{"Continuous" for interpolated palettes, or "discrete".}
+\item{type}{"Continuous" for interpolated palettes, or "discrete"}
+
+\item{label}{Name of source movie (for use when creating palette swatches)}
 }
 \value{
 A vector of colours.
@@ -30,7 +32,8 @@ image(volcano, col = pal)
 
 }
 \seealso{
-Karthik Ram's `wesanderson`(\url{https://github.com/karthik/wesanderson}) color palettes.
+Karthik Ram's [wesanderson](https://github.com/karthik/wesanderson) color palettes
+Chris Hamm's [spaceMovie](https://github.com/butterflyology/spaceMovie) Star Wars-themed palettes which feature some of my early Star Wars palettes
 }
 \keyword{colours}
 
