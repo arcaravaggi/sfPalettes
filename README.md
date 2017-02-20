@@ -1,7 +1,7 @@
 <!-- Please edit README.Rmd and use to generate README.md -->
 
 ---
-title: "sfPalettes - Sci-fi movie colour palettes"
+sfPalettes - Sci-fi movie colour palettes
 ---
 
 
