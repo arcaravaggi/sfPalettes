@@ -1,128 +1,174 @@
-# sfPalettes - Sci-fi movie colour palettes
+<!-- Please edit README.Rmd and use to generate README.md -->
 
+---
+title: "sfPalettes - Sci-fi movie colour palettes"
+---
+
+
+Not too long ago, on a laptop not that far away...
 
 sfPalettes is a library of colour palettes based on popular (and, perhaps, not so popular) science fiction movies. All colour palettes in this package were created using a number of publically available sources, including screenshots and posters. 
 
-For an index of the palettes contained within the package, call the internal `mov` dataframe. For usage instructions, [click here](http://htmlpreview.github.io/?https://github.com/arcaravaggi/sfPalettes/blob/master/vignettes/sfPalettes.html).
+sfPalettes was inspired by Kartik Ram's [wesanderson](https://github.com/karthik/wesanderson) package and Chris Hamm's [spaceMovie](https://github.com/butterflyology/spaceMovie) Star Wars-themed package.. 
 
-sfPalettes was inspired by Kartik Ram's [wesanderson](https://github.com/karthik/wesanderson) package and Chris Hamm's [spaceMovie](https://github.com/butterflyology/spaceMovie) Star Wars-themed package. `sfPalettes` began as contributions to `spaceMovie` and the package still contains my original Star Wars movie palettes. 
-
-## Installation
+### Installation
 
 ```r
 devtools::install_github("arcaravaggi/sfPalettes")
 ```
 
-### Example
+### Usage
 
-#### Scatterplot with the Jurassic Park palette
+```r
+library(sfPalettes)
+# See all palettes
+names(SF_palettes)
+```
+
+```
+##  [1] "Hope"     "Rogue"    "Empire"   "Jedi"     "Menace"   "Clones"  
+##  [7] "Sith"     "Force"    "Jurassic" "Her"      "Martian"  "Sunshine"
+```
+
+### Package palettes and example plots
+
+#### A New Hope
 
 ```r
 library("ggplot2")
-```
-
-```
-## Warning: package 'ggplot2' was built under R version 3.3.2
-```
-
-```r
 ggplot(iris, aes(Sepal.Length, Sepal.Width, color = Species)) +
   theme_bw() +
   geom_point(size = 3) +
-  scale_color_manual(values = SF_palette("JP")) +
+  scale_color_manual(values = SF_palette("Hope")) +
   labs(y = "Sepal width", x = "Sepal length") +
   theme(legend.text = element_text(face = "italic"))
 ```
 
-<img src="figure/JP1-1.png" style="display: block; margin: auto;" />
-
-### Package palettes
-
-Palettes will be added as-and-when I have time to develop them. If you'd like to contribute a palette, see __Development__, below.
+<img src="figure/Hope1-1.png" width="672" style="display: block; margin: auto;" />
 
 
 ```r
-SF_palette("ANH")
+SF_palette("Hope")
 ```
 
-<img src="figure/ANH-1.png" style="display: block; margin: auto;" />
+<img src="figure/Hope2-1.png" width="672" style="display: block; margin: auto;" />
+
+#### Attack of the Clones
+
+```r
+SF_palette("Clones")
+```
+
+<img src="figure/Clones-1.png" width="672" style="display: block; margin: auto;" />
+
+#### Eternal Sunshine of the Spotless Mind
+
+```r
+SF_palette("Sunshine")
+```
+
+<img src="figure/Sunshine-1.png" width="672" style="display: block; margin: auto;" />
+
+#### Her
+
+```r
+pal <- SF_palette("Her", 21, type = "continuous")
+image(volcano, col = pal)
+```
+
+<img src="figure/volcano-1.png" width="672" style="display: block; margin: auto;" />
 
 
 ```r
-SF_palette("AOTC")
+SF_palette("Her")
 ```
 
-<img src="figure/Attack of the Clones-1.png" style="display: block; margin: auto;" />
+<img src="figure/Her-1.png" width="672" style="display: block; margin: auto;" />
+
+#### Jurassic Park
+
+```r
+pal <- SF_palette("Jurassic", 100, type = "continuous")
+# heatmap is a local dataset
+ggplot(heatmap, aes(x = X2, y = X1, fill = value)) +
+  geom_tile() + 
+  scale_fill_gradientn(colours = pal) + 
+  scale_x_discrete(expand = c(0, 0)) +
+  scale_y_discrete(expand = c(0, 0)) + 
+  coord_equal() 
+```
+
+<img src="figure/jurassic_heatmap-1.png" width="672" style="display: block; margin: auto;" />
 
 
 ```r
-SF_palette("ESSM")
+SF_palette("Jurassic")
 ```
 
-<img src="figure/ESSM-1.png" style="display: block; margin: auto;" />
+<img src="figure/Jurassic-1.png" width="672" style="display: block; margin: auto;" />
+
+#### Rogue One
+
+```r
+SF_palette("Rogue")
+```
+
+<img src="figure/Rogue-1.png" width="672" style="display: block; margin: auto;" />
+
+#### Return of the Jedi
+
+```r
+SF_palette("Jedi")
+```
+
+<img src="figure/Jedi-1.png" width="672" style="display: block; margin: auto;" />
+
+#### Revenge of the Sith
+
+```r
+SF_palette("Sith")
+```
+
+<img src="figure/Sith-1.png" width="672" style="display: block; margin: auto;" />
 
 
 ```r
-SF_palette("HER")
+qplot(factor(cyl), data=mtcars, geom="bar", fill=factor(vs)) + 
+  scale_fill_manual(values = SF_palette("Sith"))
 ```
 
-<img src="figure/HER-1.png" style="display: block; margin: auto;" />
+<img src="figure/ggplot1-1.png" width="672" style="display: block; margin: auto;" />
+
+#### The Empire Strikes Back
+
+```r
+SF_palette("Empire")
+```
+
+<img src="figure/Empire-1.png" width="672" style="display: block; margin: auto;" />
+
+#### The Force Awakens
+
+```r
+SF_palette("Force")
+```
+
+<img src="figure/Force-1.png" width="672" style="display: block; margin: auto;" />
 
 
 ```r
-SF_palette("JP")
+SF_palette("Martian")
 ```
 
-<img src="figure/JP-1.png" style="display: block; margin: auto;" />
+<img src="figure/Martian-1.png" width="672" style="display: block; margin: auto;" />
 
+#### The Phantom Menace
 
 ```r
-SF_palette("RGO")
+SF_palette("Menace")
 ```
 
-<img src="figure/RGO-1.png" style="display: block; margin: auto;" />
-
-
-```r
-SF_palette("ROTJ")
-```
-
-<img src="figure/ROTJ-1.png" style="display: block; margin: auto;" />
-
-
-```r
-SF_palette("ROTS")
-```
-
-<img src="figure/ROTS-1.png" style="display: block; margin: auto;" />
-
-
-```r
-SF_palette("TESB")
-```
-
-<img src="figure/TESB-1.png" style="display: block; margin: auto;" />
-
-
-```r
-SF_palette("TFA")
-```
-
-<img src="figure/TFA-1.png" style="display: block; margin: auto;" />
-
-
-```r
-SF_palette("TM")
-```
-
-<img src="figure/TM-1.png" style="display: block; margin: auto;" />
-
-
-```r
-SF_palette("TPM")
-```
-
-<img src="figure/TPM-1.png" style="display: block; margin: auto;" />
+<img src="figure/Menace-1.png" width="672" style="display: block; margin: auto;" />
 
 ## Development
 
