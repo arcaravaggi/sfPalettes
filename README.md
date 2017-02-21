@@ -28,6 +28,7 @@ names(SF_palettes)
 ```
 ##  [1] "Hope"     "Rogue"    "Empire"   "Jedi"     "Menace"   "Clones"  
 ##  [7] "Sith"     "Force"    "Jurassic" "Her"      "Martian"  "Sunshine"
+## [13] "Future"
 ```
 
 ### Package palettes and example plots
@@ -60,6 +61,14 @@ SF_palette("Clones")
 ```
 
 <img src="figure/Clones-1.png" width="672" style="display: block; margin: auto;" />
+
+#### Back to the Future
+
+```r
+SF_palette("Future")
+```
+
+<img src="figure/Future-1.png" width="672" style="display: block; margin: auto;" />
 
 #### Eternal Sunshine of the Spotless Mind
 
@@ -155,6 +164,7 @@ SF_palette("Force")
 
 <img src="figure/Force-1.png" width="672" style="display: block; margin: auto;" />
 
+#### The Martian
 
 ```r
 SF_palette("Martian")
