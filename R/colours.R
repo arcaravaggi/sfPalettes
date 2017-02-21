@@ -21,7 +21,9 @@ SF_palettes <- list(
 #The Martian
   Martian = c("#DEAE66", "#7A2A1C", "#1D0E0A", "#A37E47", "#E8AF92", "#EACA97", "#3F1F14"),
 #Eternal Sunshine of the Spotless Mind
-  Sunshine = c("#CAD4E0", "#B4887F", "#B7ADA1", "#0F5DA5", "#51A2BF", "#271314", "#6A2423")
+  Sunshine = c("#CAD4E0", "#B4887F", "#B7ADA1", "#0F5DA5", "#51A2BF", "#271314", "#6A2423"),
+#Back to the Future
+  Future = c("#000000", "#B21119", "#F2DF34", "#4570AC", "#E44B04", "#3DBF33")
 )
 
 
