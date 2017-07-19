@@ -1,6 +1,6 @@
-#' @title sfPalettes - Colour palettes based on sci-fi movies
+#' @title sfPalettes
 #' @name sfPalettes
 #' @docType package
-#' @details Colour palettes based on sci-fi movies
-#' @description Colour palettes based on sci-fi movies
+#' @details list of palettes based on science fiction movies
+#' @description list of palettes based on science fiction movies
 NULL
